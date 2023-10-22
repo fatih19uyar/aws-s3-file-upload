@@ -15,7 +15,11 @@ async function uploadFileToS3(bucketName, key, filePath) {
     };
 
     await s3.send(new PutObjectCommand(params));
-
+    fs.unlink(filePath, (err) => {
+      if (err) {
+        console.error("Geçici dosya silinirken hata oluştu:", err);
+      }
+    });
     console.log("Dosya başarıyla yüklendi.");
   } catch (err) {
     console.error("Dosya yüklenirken hata oluştu:", err);
