@@ -1,0 +1,17 @@
+{
+  "name": "aws-storage-upload",
+  "version": "1.0.0",
+  "description": "how to upload file on aws storage ",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "OFU",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.433.0",
+    "@aws-sdk/types": "^3.433.0",
+    "aws-sdk": "^2.1478.0"
+  }
+}
