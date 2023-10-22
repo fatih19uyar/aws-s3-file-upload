@@ -1,0 +1,11 @@
+{
+    "awsConfig": {
+      "region": "us-east-1",
+      "credentials": {
+        "accessKeyId": "YOUR_ACCESS_KEY",
+        "secretAccessKey": "YOUR_SECRET_ACCESS_KEY"
+      }
+    },
+    "bucketName": "test"
+  }
+  

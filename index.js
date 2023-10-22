@@ -1,17 +1,9 @@
 const { S3, PutObjectCommand } = require("@aws-sdk/client-s3");
 const { Readable } = require("stream");
 const fs = require("fs");
+const config = require("./config.json")
 
-const awsConfig = {
-  region: "us-east-1",
-  credentials: {
-    accessKeyId: "YOUR_ACCESS_KEY",
-    secretAccessKey: "YOUR_SECRET_ACCESS_KEY",
-  },
-};
-
-const s3 = new S3(awsConfig);
-
+const s3 = new S3(config.awsConfig);
 const uploadFileToS3 = async (bucketName, key, filePath) => {
   try {
     const fileStream = fs.createReadStream(filePath);
@@ -31,7 +23,7 @@ const uploadFileToS3 = async (bucketName, key, filePath) => {
 };
 
 // Örnek kullanım
-const bucketName = "test";
+const bucketName = config.bucketName;
 const key = "test/adsiz.png";
 const filePath = "adsiz.png";
 
