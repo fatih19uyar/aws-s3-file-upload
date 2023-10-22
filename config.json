@@ -6,6 +6,7 @@
         "secretAccessKey": "YOUR_SECRET_ACCESS_KEY"
       }
     },
-    "bucketName": "test"
+    "bucketName": "test",
+    "key": "test"
   }
   

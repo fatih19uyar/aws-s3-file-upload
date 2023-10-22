@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dosya Yükleme ve Listeleme Formu</title>
+</head>
+<body>
+  <h1>Dosya Yükleme ve Listeleme Formu</h1>
+  <form action="/upload" method="post" enctype="multipart/form-data" id="uploadForm">
+    <label for="file">Dosya Seç:</label>
+    <input type="file" name="file" id="file" accept=".png" required>
+    <br>
+    <button type="submit">Dosyayı Yükle</button>
+  </form>
+  <div id="message"></div>
+
+  <div id="fileList">
+    <h2>Dosya Listesi</h2>
+    <ul>
+      <!-- S3 dosya listesi buraya eklenecek -->
+    </ul>
+  </div>
+
+  <h2>Dosya İndirme</h2>
+  <label for="downloadFileName">İndirilecek Dosya Adı:</label>
+  <input type="text" id="downloadFileName" placeholder="Dosya Adını Girin">
+  <button type="button" id="downloadButton">Dosyayı İndir</button>
+  
+  <div id="downloadMessage"></div>
+
+  <script src="upload.js"></script>
+</body>
+</html>
